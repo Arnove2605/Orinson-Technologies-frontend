@@ -1,0 +1,31 @@
+<form [formGroup]="contactform" (ngSubmit)="onSubmit()">
+  <div class="support-container" style="background-color: orangered;">
+    <mat-card class="support-card">
+      <div class="card-content">
+        <div class="phone-icon">
+          <img src="assets/images/enhanced_image.png" height="500px" width="500px">
+        </div>
+        <div class="form-content">
+          <h2 class="support-heading">Need support?</h2>
+          <p>Contact us if you need further assistance.</p>
+          <mat-form-field appearance="fill" class="support-field">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Enter your name" formControlName="name">
+            <mat-error *ngIf="contactform.controls['name'].dirty && contactform.hasError('required','name')">* Name is required</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="support-field">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Enter your email" type="email" formControlName="email">
+            <mat-error *ngIf="contactform.controls['email'].dirty && contactform.hasError('required','email')">* Email is required</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="support-field">
+            <mat-label>Please enter the details of your request</mat-label>
+            <textarea matInput placeholder="Enter your message" formControlName="message"></textarea>
+            <mat-error *ngIf="contactform.controls['message'].dirty && contactform.hasError('required','message')">* Message is required</mat-error>
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit">Submit</button>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</form>

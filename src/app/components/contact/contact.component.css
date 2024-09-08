@@ -1,0 +1,82 @@
+.support-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+    padding: 20px;
+  }
+  
+  .support-card {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+  
+  .phone-icon {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 250px; /* Minimum width to prevent it from shrinking too much */
+  }
+  
+  .form-content {
+    flex: 1;
+    margin-left: 20px;
+    min-width: 300px; /* Ensure form content doesn't get too narrow */
+  }
+  
+  .support-heading {
+    color: #ff3d00;
+    margin-bottom: 16px;
+  }
+  
+  .support-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  button {
+    width: 100%;
+    background-color: #ff3d00;
+    color: white;
+  }
+  
+  button:hover {
+    background-color: #e53935;
+  }
+  
+  @media (max-width: 768px) {
+    .support-card {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .form-content {
+      margin-left: 0;
+      margin-top: 20px; /* Add space between the phone icon and form content on small screens */
+    }
+  
+    .phone-icon {
+      margin-bottom: 20px; /* Add space below the image on small screens */
+    }
+  
+    .support-card img {
+      height: auto;
+      width: 100%; /* Ensure the image resizes to the container width */
+    }
+  }
+  
